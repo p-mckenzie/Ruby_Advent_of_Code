@@ -1,7 +1,7 @@
 require 'rspec'
 require '2021/Day01'
 
-RSpec.describe Day01 do
+RSpec.describe Y2021::Day01 do
     let(:example_data) { 
         "199
         200
@@ -14,13 +14,13 @@ RSpec.describe Day01 do
         260
         263" 
     }
-    let(:subject) { Day01.new(example_data) }
+    let(:subject) { Y2021::Day01.new(example_data) }
     
     describe '#counts number of depth increases' do
         context 'when given example from webpage' do
 
             it 'produces appropriate count (7)' do
-                expect(subject.count_descending).to eq 7
+                expect(subject.part_1).to eq 7
             end
         end
     end
@@ -29,7 +29,7 @@ RSpec.describe Day01 do
         context 'when given example from webpage' do
 
             it 'produces appropriate count (7)' do
-                expect(subject.count_descending(subject.triples_sum)).to eq 5
+                expect(subject.part_2).to eq 5
             end
         end
     end

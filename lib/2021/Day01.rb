@@ -1,29 +1,27 @@
-require_relative '../Base.rb'
+require_relative '../Base'
 
-class Day01 < Base
-  @@day = 1
-  @@year = 2021
+module Y2021
+  class Day01 < Base
+    @@day = 1
+    @@year = 2021
 
-  def initialize(data=get_data)
-    @data = data.split.map(&:to_i)
+    def initialize(data=get_data)
+      @data = data.split.map(&:to_i)
+    end
+
+    def triples_sum
+      @data.each_cons(3).map(&:sum)
+    end
+
+    def part_1
+      @data.each_cons(2).select {|a,b| a < b }.length
+    end
+
+    def part_2
+      triples_sum.each_cons(2).select {|a,b| a < b }.length
+    end  
   end
-
-  def triples_sum
-    @data.each_cons(3).map(&:sum)
-  end
-
-  def count_descending(arr=@data)
-    arr.each_cons(2).select {|a,b| a < b }.length
-  end
-
-  def run
-    puts "----- Day #{@@day} -----"
-    puts "Part 1: #{count_descending}"
-    puts "Part 2: #{count_descending(triples_sum)}"
-    puts
-  end
-  
 end
 
-executable = Day01.new
+executable = Y2021::Day01.new
 executable.run
