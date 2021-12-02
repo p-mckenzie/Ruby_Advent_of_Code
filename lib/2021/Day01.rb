@@ -4,9 +4,8 @@ class Day01 < Base
   @@day = 1
   @@year = 2021
 
-  def initialize(data:nil)
-    @data = data ? data : get_data
-    @data.map!(&:to_i)
+  def initialize(data=get_data)
+    @data = data.split.map(&:to_i)
   end
 
   def triples_sum
