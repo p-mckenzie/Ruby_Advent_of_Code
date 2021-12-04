@@ -74,5 +74,5 @@ module Y2021
   end
 end
 
-executable = Y2021::Day03.new()
-puts executable.run
+executable = Y2021::Day03.new
+executable.run
