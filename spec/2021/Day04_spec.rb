@@ -25,19 +25,19 @@ RSpec.describe Y2021::Day04 do
     }
     let(:subject) { Y2021::Day04.new(example_data) }
     
-    describe '#calculates naive movements' do
+    describe "#calculates first board's winning score" do
         context 'when given example from webpage' do
 
-            it 'produces appropriate product (4512)' do
+            it 'produces appropriate score (4512)' do
                 expect(subject.part_1).to eq 4512
             end
         end
     end
 
-    describe '#calculates movements with aim logic' do
+    describe "#calculates last board's winning score" do
         context 'when given example from webpage' do
 
-            it 'produces appropriate product (1924)' do
+            it 'produces appropriate score (1924)' do
                 expect(subject.part_2).to eq 1924
             end
         end
