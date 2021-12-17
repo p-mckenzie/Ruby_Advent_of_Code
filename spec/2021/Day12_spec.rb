@@ -46,9 +46,9 @@ RSpec.describe Y2021::Day12 do
                 expect(subject.part_1).to eq(pt1)
             end
         end
-        describe '#calculates number of valid paths' do
-            it "produces appropriate count (#{pt1})" do
-                expect(subject.part_1).to eq(pt1)
+        describe '#calculates number of longer valid paths' do
+            it "produces appropriate count (#{pt2})" do
+                expect(subject.part_2).to eq(pt2)
             end
         end
     end
