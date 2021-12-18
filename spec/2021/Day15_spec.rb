@@ -3,41 +3,33 @@ require '2021/Day15'
 
 RSpec.describe Y2021::Day15 do
     let(:example_data) { 
-"NNCB
-
-CH -> B
-HH -> N
-CB -> H
-NH -> C
-HB -> C
-HC -> B
-HN -> C
-NN -> C
-BH -> H
-NC -> B
-NB -> B
-BN -> B
-BB -> N
-BC -> B
-CC -> N
-CN -> C" 
+"1163751742
+1381373672
+2136511328
+3694931569
+7463417111
+1319128137
+1359912421
+3125421639
+1293138521
+2311944581" 
     }
     let(:subject) { Y2021::Day15.new(example_data) }
     
-    describe '#calculates number of polymers after 10 cycles' do
+    describe '#calculates risk of short path' do
         context 'when given example from webpage' do
 
-            it 'produces appropriate count (1588)' do
-                expect(subject.part_1).to eq 1588
+            it 'produces appropriate count (40)' do
+                expect(subject.part_1).to eq 40
             end
         end
     end
 
-    describe '#calculates number of polymers after 40 cycles' do
+    describe '#calculates risk of extended path' do
         context 'when given example from webpage' do
 
-            it 'produces appropriate count (2188189693529)' do
-                expect(subject.part_2).to eq 2188189693529
+            it 'produces appropriate count (315)' do
+                expect(subject.part_2).to eq 315
             end
         end
     end
