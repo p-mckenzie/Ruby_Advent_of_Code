@@ -16,11 +16,6 @@ module Y2021
 
     end
 
-    def display
-      puts @data.map{|row| row.join(' ')}.join("\n")
-      puts
-    end
-
     def neighbors(x,y)
       [
         if x+1<@xlength then [x+1, y] end, #bottom
@@ -43,7 +38,6 @@ module Y2021
 
       neighbors(x,y).compact.each {
         |neighbor_x, neighbor_y|
-        #puts neighbor_x.class, neighbor_y.class
         unless @data[neighbor_x][neighbor_y]==0 then
           @data[neighbor_x][neighbor_y] += 1
         end
@@ -62,7 +56,6 @@ module Y2021
         |x|
         (0...@ylength).each {
           |y|
-          #puts "#{x}, #{y}, #{@data[x][y]}"
           @data[x][y] += 1
         }
       }
@@ -71,7 +64,6 @@ module Y2021
         |x|
         (0...@ylength).each {
           |y|
-          #puts "#{x}, #{y}, #{@data[x][y]}"
           if @data[x][y] > 9 then
             flash(x,y)
           end

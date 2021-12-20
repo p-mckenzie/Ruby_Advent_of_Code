@@ -40,7 +40,6 @@ module Y2021
                 pattern = pattern[0..-2]
               else
                 # raise an issue
-                #puts "Error! Expected #{@opening[pattern[-1]]} and got #{char} instead"
                 @score_incorrect += @@points_incorrect[char]
                 throw :invalidpattern
               end
