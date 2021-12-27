@@ -39,7 +39,7 @@ start-RW" => [226, 3509]
 }
 
 RSpec.describe Y2021::Day12 do
-    def self.test_double_it(input, pt1, pt2)
+    def self.test_paths(input, pt1, pt2)
         subject = Y2021::Day12.new(input)
         describe '#calculates number of valid paths' do
             it "produces appropriate count (#{pt1})" do
@@ -56,6 +56,6 @@ RSpec.describe Y2021::Day12 do
     examples.each {
         |example_data, arr|
         pt_1, pt_2 = arr
-        self.test_double_it(example_data, pt_1, pt_2)
+        self.test_paths(example_data, pt_1, pt_2)
     }
 end

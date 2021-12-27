@@ -15,18 +15,18 @@ examples = {"8A004A801A8002F478" => [16, nil],
 }
 
 RSpec.describe Y2021::Day16 do
-    def self.test_double_it(input, pt1, pt2)
+    def self.test_packet_decode(input, pt1, pt2)
         subject = Y2021::Day16.new(input)
         if pt1 then
-            describe '#calculates number of valid paths' do
-                it "produces appropriate count (#{pt1})" do
+            describe '#calculates sum of version numbers' do
+                it "produces appropriate sum (#{pt1})" do
                     expect(subject.part_1).to eq(pt1)
                 end
             end
         end
         if pt2 then
-            describe '#calculates number of valid paths' do
-                it "produces appropriate count (#{pt2})" do
+            describe '#calculates final expression result' do
+                it "produces appropriate number (#{pt2})" do
                     expect(subject.part_2).to eq(pt2)
                 end
             end
@@ -36,6 +36,6 @@ RSpec.describe Y2021::Day16 do
     examples.each {
         |example_data, arr|
         pt_1, pt_2 = arr
-        self.test_double_it(example_data, pt_1, pt_2)
+        self.test_packet_decode(example_data, pt_1, pt_2)
     }
 end
