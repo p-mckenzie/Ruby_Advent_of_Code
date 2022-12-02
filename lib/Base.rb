@@ -3,7 +3,7 @@ class Base
     @@year = 
     
     def get_data
-        File.read(File.join(File.dirname(__FILE__), "../public/#{@@year}/day#{@@day}.txt"))
+        File.read(File.join(File.dirname(__FILE__), "../public/#{@@year}/day#{@@day.to_s.rjust(2, '0')}.txt"))
     end
     
     def run
