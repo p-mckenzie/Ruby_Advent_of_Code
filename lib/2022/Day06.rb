@@ -1,5 +1,4 @@
 require_relative '../Base'
-require 'byebug'
 
 module Y2022
   class Day06 < Base
