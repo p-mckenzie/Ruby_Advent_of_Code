@@ -24,11 +24,11 @@ RSpec.describe Y2023::Day11 do
             end
 
             it 'produces appropriate sum (1030)' do
-                expect(subject.part_2(by=10)).to eq 1030
+                expect(subject.solve(by=10)).to eq 1030
             end
 
             it 'produces appropriate sum (8410)' do
-                expect(subject.part_2(by=100)).to eq 8410
+                expect(subject.solve(by=100)).to eq 8410
             end
         end
     end

@@ -20,7 +20,7 @@ module Y2023
       }
     end
 
-    def expand(galaxies: @galaxies.clone, axis: 0, by: 2)
+    def expand(galaxies, axis, by)
       i = 0
       while i<galaxies.map {|arr| arr[axis]}.max do
         if galaxies.filter {|arr| arr[axis]==i}.empty? then
@@ -41,22 +41,21 @@ module Y2023
       galaxies
     end
 
-    def part_1
-      galaxies = expand
-      galaxies = expand(galaxies: galaxies, axis:1)
+    def solve(by)
+      galaxies = expand(galaxies=@galaxies.clone, axis=0, by=by)
+      galaxies = expand(galaxies=galaxies, axis=1, by=by)
       galaxies.combination(2).map {
         |a,b|
         (a.first - b.first).abs + (a.last - b.last).abs
       }.sum
     end
 
-    def part_2(by = 1000000)
-      galaxies = expand(axis: 0, by: by)
-      galaxies = expand(galaxies: galaxies, axis: 1, by: by)
-      galaxies.combination(2).map {
-        |a,b|
-        (a.first - b.first).abs + (a.last - b.last).abs
-      }.sum
+    def part_1
+      solve(2)
+    end
+
+    def part_2
+      solve(1000000)
     end
   end
 end
