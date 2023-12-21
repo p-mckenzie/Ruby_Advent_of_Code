@@ -31,9 +31,9 @@ hdj{m>838:A,pv}
                 expect(subject.part_1).to eq 19114
             end
 
-            # it 'produces appropriate with big range (167409079868000)' do
-            #     expect(subject.part_2).to eq 167409079868000
-            # end
+            it 'produces appropriate with big range (167409079868000)' do
+                expect(subject.part_2).to eq 167409079868000
+            end
         end
     end
 end
