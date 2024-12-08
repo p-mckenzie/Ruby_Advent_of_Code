@@ -1,0 +1,33 @@
+require 'rspec'
+require '2024/Day08'
+
+RSpec.describe Y2024::Day08 do
+    let(:example) { 
+"............
+........0...
+.....0......
+.......0....
+....0.......
+......A.....
+............
+............
+........A...
+.........A..
+............
+............" 
+    }
+    let(:subject) { Y2024::Day08.new(example) }
+    
+    describe '#finds antinodes' do
+        context 'when given example from webpage' do
+
+            it 'explodes by 1 (14)' do
+                expect(subject.part_1).to eq 14
+            end
+
+            it 'explodes as far as possible (34)' do
+                expect(subject.part_2).to eq 34
+            end
+        end
+    end
+end
