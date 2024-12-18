@@ -40,9 +40,6 @@ module Y2024
         |row, col|
           text[row][col] = '#'
       }
-      unless text.flatten.include?("@")
-        byebug
-      end
       puts text.map(&:join).join("\n")
     end
 
