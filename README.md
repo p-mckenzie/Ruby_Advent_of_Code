@@ -1,7 +1,5 @@
 # Advent of Code 2021
-25 scripts to complete the 25 challenges for the [2021](https://adventofcode.com/2021) and [2022](https://adventofcode.com/2022) Advent of Code challenges. All code written by [Paige McKenzie](https://github.com/p-mckenzie).
-
-This project was undertaken live, during December 2021, and December 2022.
+Scripts to complete the annual [Advent of Code](https://adventofcode.com/) challenges. All code written by [Paige McKenzie](https://github.com/p-mckenzie).
 
 ## Usage
 
