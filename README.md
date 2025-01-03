@@ -1,4 +1,4 @@
-# Advent of Code 2021
+# Advent of Code
 Scripts to complete the annual [Advent of Code](https://adventofcode.com/) challenges. All code written by [Paige McKenzie](https://github.com/p-mckenzie).
 
 ## Usage
